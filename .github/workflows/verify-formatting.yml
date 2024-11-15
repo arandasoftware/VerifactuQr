@@ -16,4 +16,4 @@ jobs:
       run: dotnet restore
 
     - name: Format solution
-      run: dotnet format --verify-no-changes --severity error
+      run: dotnet format src/VerifactuQr/VerifactuQr.sln --verify-no-changes --severity error
