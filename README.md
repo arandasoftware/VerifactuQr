@@ -79,6 +79,7 @@ La URL debe incluir los siguientes parámetros:
 
 Se incluyen ejemplos de códigos QR en diferentes formatos de factura y orientaciones.
 
+Enlace documentación AEAT https://www.agenciatributaria.es/static_files/AEAT_Desarrolladores/EEDD/IVA/VERI-FACTU/DetalleEspecificacTecnCodigoQRfactura.pdf
 ---
 
 Este README resume las principales especificaciones del sistema **VERI*FACTU** para el manejo de códigos QR en facturas, facilitando la validación y autenticación de la información de facturación ante la AEAT.
