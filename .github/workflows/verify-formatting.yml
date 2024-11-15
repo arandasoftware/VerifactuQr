@@ -13,7 +13,7 @@ jobs:
       name: Checkout Code
 
     - name: Restore NuGet Packages
-      run: dotnet restore
+      run: dotnet restore src/VerifactuQr/VerifactuQr.sln
 
     - name: Format solution
       run: dotnet format src/VerifactuQr/VerifactuQr.sln --verify-no-changes --severity error
