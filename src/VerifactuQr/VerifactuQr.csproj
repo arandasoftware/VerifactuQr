@@ -8,12 +8,4 @@
     <PackageReference Include="QRCoder" Version="1.6.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <EditorConfigFiles Remove="C:\Fuentes\Personal\VerifactuQr\src\VerifactuQr\.editorconfig" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="C:\Fuentes\Personal\VerifactuQr\src\VerifactuQr\.editorconfig" />
-  </ItemGroup>
-
 </Project>

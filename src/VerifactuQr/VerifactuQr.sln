@@ -7,6 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VerifactuQr", "VerifactuQr.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VerifactuQrTest", "..\VerifactuQrTest\VerifactuQrTest.csproj", "{3C05AEFC-38C3-4E28-B8D3-FAE24B70ED6A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BEC960C6-A611-410B-9921-90A4082EB7ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1CA0D695-724A-476F-89C9-DB726B1D98AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{45E99E50-AC25-4708-B337-E202A310C71B}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +33,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EB48664B-D04D-4491-9D79-FC9EB64E8855} = {BEC960C6-A611-410B-9921-90A4082EB7ED}
+		{3C05AEFC-38C3-4E28-B8D3-FAE24B70ED6A} = {1CA0D695-724A-476F-89C9-DB726B1D98AB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {977FB583-40B7-4E0E-BDC6-059CAC8A37E2}

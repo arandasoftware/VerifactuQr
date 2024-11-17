@@ -1,4 +1,4 @@
-﻿using QRCoder;
+using QRCoder;
 using VerifactuQr.Interfaces;
 
 namespace VerifactuQr.Factory
@@ -13,5 +13,4 @@ namespace VerifactuQr.Factory
             }
         }
     }
-
 }

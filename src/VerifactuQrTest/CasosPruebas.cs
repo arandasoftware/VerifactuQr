@@ -106,10 +106,10 @@ namespace VerifactuQrTest
             Assert.True(qrBitmap.RawFormat.Equals(ImageFormat.Bmp), "RawFormat incorrecto");
 
             // Validar propiedades del Bitmap
-            Assert.True(PixelFormat.Format24bppRgb == qrBitmap.PixelFormat, "PixelFormat incorrecto"); 
+            Assert.True(PixelFormat.Format24bppRgb == qrBitmap.PixelFormat, "PixelFormat incorrecto");
             Assert.True(qrBitmap.Width > 0 && qrBitmap.Height > 0, "La imagen generada debe tener dimensiones válidas.");
 
-            int expectedSize = 20 * 57; 
+            int expectedSize = 20 * 57;
             Assert.True(qrBitmap.Width == expectedSize && qrBitmap.Height == expectedSize, "El tamaño del Bitmap no es el esperado para el QR generado.");
 
         }

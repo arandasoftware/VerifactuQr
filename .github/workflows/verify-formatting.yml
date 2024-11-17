@@ -2,12 +2,12 @@ name: Format (Pull Request)
 on:
   pull_request:
     branches:
-      - master 
+      - main 
   workflow_dispatch:
 
 jobs:
   format:
-    runs-on: windows-2019
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v4
       name: Checkout Code

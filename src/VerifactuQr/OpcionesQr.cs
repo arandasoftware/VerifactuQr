@@ -1,4 +1,4 @@
-﻿namespace VerifactuQr
+namespace VerifactuQr
 {
     public class OpcionesQr
     {
@@ -13,5 +13,4 @@
         public bool Test { get; set; }
         public bool EmiteFacturaVerificable { get; set; }
     }
-
 }
