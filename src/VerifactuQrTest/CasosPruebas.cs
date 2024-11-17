@@ -5,6 +5,7 @@ using VerifactuQr.Extensions;
 
 namespace VerifactuQrTest
 {
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Interoperability", "CA1416:Validar la compatibilidad de la plataforma", Justification = "Solo para plataformas Windows")]
     public class CasosPruebas
     {
         [Fact]
@@ -14,7 +15,7 @@ namespace VerifactuQrTest
 
             Assert.False(opciones.Test);
             Assert.True(opciones.EmiteFacturaVerificable);
-            Assert.True(opciones.Tamanio == TamanioQr.Pequeno);
+            Assert.Equal(TamanioQr.Pequeno, opciones.Tamanio);
         }
 
         [Fact]
@@ -26,77 +27,58 @@ namespace VerifactuQrTest
 
             Assert.True(qr.OpcionesQr.Test);
             Assert.True(qr.OpcionesQr.EmiteFacturaVerificable);
-            Assert.True(qr.OpcionesQr.Tamanio == TamanioQr.Pequeno);
-
+            Assert.Equal(TamanioQr.Pequeno, qr.OpcionesQr.Tamanio);
         }
 
         [Fact]
         public void Generar_UrlValida_QrVerificable_EntornoTest()
         {
             Qr qr = new();
-
             qr.ConfigurarQr(QrVerificablePruebas);
-
             qr.DatosQr = ObtenerDatosQr();
-
             string urlTest = qr.ObtenerUrl();
 
             Assert.Equal("https://prewww2.aeat.es:443/wlpl/TIKE-CONT/ValidarQR?nif=89890001K&numserie=12345678%26G33&fecha=01-01-2024&importe=241.40", urlTest);
-
         }
 
         [Fact]
         public void Generar_UrlValida_QrVerificable_EntornoProduccion()
         {
             Qr qr = new();
-
             qr.ConfigurarQr(QrVerificable);
-
             qr.DatosQr = ObtenerDatosQr();
-
             string urlTest = qr.ObtenerUrl();
 
             Assert.Equal("https://www2.agenciatributaria.gob.es:443/wlpl/TIKE-CONT/ValidarQR?nif=89890001K&numserie=12345678%26G33&fecha=01-01-2024&importe=241.40", urlTest);
-
         }
 
         [Fact]
         public void Generar_UrlValida_QrNoVerificable_EntornoTest()
         {
             Qr qr = new();
-
             qr.ConfigurarQr(QrNoVerificablePruebas);
-
             qr.DatosQr = ObtenerDatosQr();
-
             string urlTest = qr.ObtenerUrl();
 
             Assert.Equal("https://prewww2.aeat.es:443/wlpl/TIKE-CONT/ValidarQRNoVerifactu?nif=89890001K&numserie=12345678%26G33&fecha=01-01-2024&importe=241.40", urlTest);
-
         }
 
         [Fact]
         public void Generar_UrlValida_QrNoVerificable_EntornoProduccion()
         {
             Qr qr = new();
-
             qr.ConfigurarQr(QrNoVerificable);
-
             qr.DatosQr = ObtenerDatosQr();
-
             string urlTest = qr.ObtenerUrl();
 
             Assert.Equal("https://www2.agenciatributaria.gob.es:443/wlpl/TIKE-CONT/ValidarQRNoVerifactu?nif=89890001K&numserie=12345678%26G33&fecha=01-01-2024&importe=241.40", urlTest);
-
         }
 
         [Fact]
         public void ObtenerQrBitmap_RetornoBitmapValido_ParaBmp()
         {
             Qr qr = new();
-
             qr.ConfigurarQr(QrNoVerificable);
-
             qr.DatosQr = ObtenerDatosQr();
 
             Bitmap qrBitmap = qr.ObtenerQrBitmap(QrExtension.QrFormato.Bitmap);
@@ -111,7 +93,6 @@ namespace VerifactuQrTest
 
             int expectedSize = 20 * 57;
             Assert.True(qrBitmap.Width == expectedSize && qrBitmap.Height == expectedSize, "El tamaño del Bitmap no es el esperado para el QR generado.");
-
         }
 
         [Fact]
