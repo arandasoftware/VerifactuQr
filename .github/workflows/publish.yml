@@ -27,4 +27,4 @@ jobs:
           dotnet pack VerifactuQr.sln -c Release -o out  
 
       - name: Push generated package to GitHub registry
-        run: run: dotnet nuget push "**/*.nupkg" --skip-duplicate --no-symbols true --api-key ${{secrets.GITHUB_TOKEN}} source "github"
+        run: dotnet nuget push "**/*.nupkg" --skip-duplicate --no-symbols true --api-key ${{secrets.GITHUB_TOKEN}} source "github"
