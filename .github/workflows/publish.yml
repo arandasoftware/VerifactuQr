@@ -27,4 +27,4 @@ jobs:
           dotnet pack VerifactuQr.sln -c Release -o out  
 
       - name: Push generated package to GitHub registry
-        run: dotnet nuget add source "**/*.nupkg" --username arandafra@outlook.es --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/arandasoftware/index.json"
+        run: run: dotnet nuget push "**/*.nupkg" --skip-duplicate --no-symbols true --api-key ${{secrets.GITHUB_TOKEN}} source "github"
