@@ -18,8 +18,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v1
 
-    - name: Restore NuGet Packages
-      run: dotnet restore src/VerifactuQr/VerifactuQr.sln     
+      - name: Restore NuGet Packages
+        run: dotnet restore src/VerifactuQr/VerifactuQr.sln     
           
       - name: Build solution and generate NuGet package
         run: |  
