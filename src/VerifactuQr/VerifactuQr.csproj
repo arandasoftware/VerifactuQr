@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -8,11 +8,12 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Description>VERI*FACTU QR</Description>
     <Title>VERI*FACTU QR</Title>
-    <AssemblyVersion></AssemblyVersion>
-    <FileVersion></FileVersion>
-    <Version>1.0</Version>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <VersionPrefix>1.0.0</VersionPrefix>
+  </PropertyGroup>
+  
   <ItemGroup>
     <None Include="..\..\README.md">
       <Pack>True</Pack>
