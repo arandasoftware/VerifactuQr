@@ -1,9 +1,6 @@
 name: Publish Package
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
     types:
       - closed
