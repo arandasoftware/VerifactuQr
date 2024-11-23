@@ -10,7 +10,7 @@
     <Title>VERI*FACTU QR</Title>
     <AssemblyVersion></AssemblyVersion>
     <FileVersion></FileVersion>
-    <Version>1.0.*</Version>
+    <Version>1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
