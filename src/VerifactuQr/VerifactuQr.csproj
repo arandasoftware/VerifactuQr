@@ -8,8 +8,8 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Description>VERI*FACTU QR</Description>
     <Title>VERI*FACTU QR</Title>
-    <AssemblyVersion>1.0.*.*</AssemblyVersion>
-    <FileVersion>1.0.*.*</FileVersion>
+    <AssemblyVersion></AssemblyVersion>
+    <FileVersion></FileVersion>
     <Version>$(VersionPrefix)</Version>
   </PropertyGroup>
 
