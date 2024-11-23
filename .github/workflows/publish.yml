@@ -5,12 +5,12 @@ on:
     branches:
       - main
   pull_request:
-    types: [closed]
-    branches:
-      - main
+    types:
+      - closed
 
 jobs:
   build:
+    if: github.event.pull_request.merged == true
     runs-on: windows-latest
     name: Update NuGet package
     steps:
